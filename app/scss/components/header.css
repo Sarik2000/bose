@@ -1,0 +1,174 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 2;
+  position: fixed;
+  flex-wrap: wrap;
+  padding: var(--offset) 150px;
+  transition: 500ms ease;
+}
+@media screen and (max-width: 1440px) {
+  .header {
+    padding: var(--offset) 120px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .header {
+    padding: calc(var(--offset) * 2);
+  }
+}
+@media screen and (max-width: 800px) {
+  .header {
+    padding: 30px 10px;
+  }
+}
+
+.active {
+  background-color: #fff;
+  border-bottom: 1px solid var(--c1);
+  transition: all 1ms ease;
+}
+.active .header-btn__icon {
+  fill: var(--c1);
+}
+.active .dropdown-summary__arrow {
+  fill: var(--c1);
+}
+.active .burger-svg {
+  stroke: var(--c1);
+}
+
+.header-logo {
+  display: flex;
+  font-size: 1.5em;
+}
+@media screen and (max-width: 1200px) {
+  .header-logo {
+    font-size: 1.3em;
+  }
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition-duration: 3s;
+}
+@media screen and (max-width: 1000px) {
+  .header-row {
+    display: none;
+  }
+}
+.header-row__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+}
+.header-row__item {
+  font-size: 1.3em;
+  line-height: 1;
+}
+@media screen and (max-width: 1600px) {
+  .header-row__item {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .header-row__item {
+    font-size: 1.1em;
+  }
+}
+.header-row__link {
+  color: #191919;
+}
+
+.header-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+@media screen and (max-width: 1000px) {
+  .header-right {
+    display: none;
+  }
+}
+
+.header-btn__icon {
+  fill: var(--c2);
+}
+
+.dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown-summary {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.dropdown-summary__arrow {
+  fill: var(--c2);
+}
+
+.dropdown-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+}
+
+.burger-button {
+  display: none;
+  background: none;
+  border: none;
+}
+@media screen and (max-width: 1000px) {
+  .burger-button {
+    display: flex;
+  }
+}
+
+.burger-svg {
+  stroke: var(--c2);
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+}
+
+.modal-svg {
+  fill: var(--c1);
+}
+
+.modal-logo {
+  fill: var(--c1);
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.details-summary {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.details-summary__arrow {
+  fill: var(--c2);
+}
+
+.details-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+}/*# sourceMappingURL=header.css.map */

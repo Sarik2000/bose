@@ -1,0 +1,312 @@
+@import "helpers/mixin";
+@import "app/app";
+@import "components/header";
+@import "components/slider";
+@import "components/tabs";
+@import "components/headphones";
+@import "components/batteryinfo";
+@import "components/products";
+@import "components/footer";
+@import "components/registration";
+.banner {
+  display: flex;
+  background-image: url("../img/image/Union.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 2;
+  background-position: right, top;
+  height: 100vh;
+  padding: calc(var(--offset) * 6.1);
+
+  @media screen and (max-width: 1200px) {
+    padding: var(--offset-l) 50px;
+    padding-top: 100px;
+  }
+
+  @media screen and (max-width: 800px) {
+    padding: 100px 10px;
+  }
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    background-image: none;
+    background-color: #000000;
+  }
+}
+.row {
+  flex-direction: row;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 65%;
+
+  @media screen and (max-width: 1700px) {
+    width: 60%;
+  }
+
+  @media screen and (max-width: 1600px) {
+    width: 60%;
+  }
+
+  @media screen and (max-width: 1440px) {
+    width: 60%;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 50%;
+  }
+
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 600px) {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+}
+.banner-title {
+  font-size: 4em;
+  width: 50%;
+  font-weight: var(--fwB);
+  line-height: 1.2;
+
+  @media screen and (max-width: 1600px) {
+    font-size: 3.5em;
+  }
+
+  @media screen and (max-width: 1440px) {
+    font-size: 2.8em;
+  }
+
+  @media screen and (max-width: 1200px) {
+    font-size: 2.2em;
+  }
+
+  @media screen and (max-width: 1000px) {
+    font-size: 1.8em;
+    line-height: 1.1;
+  }
+  @media screen and (max-width: 880px) {
+    font-size: 1.4em;
+    line-height: 1.1;
+  }
+  @media screen and (max-width: 780px) {
+    font-size: 1.4em;
+    line-height: 1.1;
+  }
+  @media screen and (max-width: 640px) {
+    font-size: 1.3em;
+    line-height: 1.4;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 1.1em;
+    line-height: 1.4;
+    color: var(--c2);
+  }
+}
+.banner-text {
+  font-size: 1em;
+  font-weight: var(--fwM);
+  line-height: 1;
+  @media screen and (max-width: 600px) {
+    font-size: 1em;
+    line-height: 1.4;
+    color: var(--c2);
+  }
+}
+
+.radio {
+  display: flex;
+  gap: 15px;
+}
+// .radio-label {
+// }
+.radio-input {
+  display: none;
+
+  &:checked ~ .radio-circle::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+.radio-circle {
+  position: relative;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 7px 15px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 140%;
+    height: 140%;
+    border-radius: 50%;
+    opacity: 0;
+    border: 2px solid var(--c3);
+  }
+
+  &--silver {
+    background: var(--c3);
+  }
+  &--yellow {
+    background: var(--c4);
+
+    &::after {
+      border: 2px solid var(--c4);
+    }
+  }
+  &--brown {
+    background: var(--c5);
+    &::after {
+      border: 2px solid var(--c5);
+    }
+  }
+  &--green {
+    background: var(--c6);
+    &::after {
+      border: 2px solid var(--c6);
+    }
+  }
+  &--red {
+    background: var(--c7);
+    &::after {
+      border: 2px solid var(--c7);
+    }
+  }
+}
+
+.name-color {
+  font-size: 1em;
+  padding-top: 15px;
+  font-weight: var(--fwM);
+  color: #191919;
+  @media screen and (max-width: 600px) {
+    color: var(--c2);
+  }
+}
+.banner-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 35%;
+
+  @media screen and (max-width: 1700px) {
+    width: 40%;
+  }
+
+  @media screen and (max-width: 1600px) {
+    width: 40%;
+  }
+
+  @media screen and (max-width: 1440px) {
+    width: 50%;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 50%;
+  }
+
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 880px) {
+    width: 70%;
+    padding-bottom: 220px;
+  }
+
+  @media screen and (max-width: 600px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  // .banner-right__img
+
+  &__img {
+    height: 548px;
+    width: 398px;
+
+    @media screen and (max-width: 760px) {
+      height: 350px;
+      width: 300px;
+    }
+    @media screen and (max-width: 640px) {
+      height: 300px;
+      width: 250px;
+      margin-bottom: 200px;
+    }
+    @media screen and (max-width: 600px) {
+      width: 250px;
+      padding-top: 50px;
+      object-fit: contain;
+    }
+  }
+}
+
+.banner-price {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding-top: 30px;
+
+  // .banner-price__number
+
+  &__number {
+    font-weight: var(--fwB);
+    font-size: 2.25em;
+    line-height: 1;
+    @media screen and (max-width: 1000px) {
+      font-size: 1.8em;
+    }
+    @media screen and (max-width: 780px) {
+      font-size: 1.5em;
+    }
+    @media screen and (max-width: 640px) {
+      font-size: 1.2em;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 1.2em;
+      color: var(--c2);
+    }
+  }
+
+  // .banner-price__link
+
+  &__link {
+    color: var(--c2);
+    font-weight: var(--fwB);
+    line-height: 1;
+    font-size: 1.15em;
+    border-radius: 30px;
+    background: var(--c1);
+    text-align: center;
+    padding: 10px 40px;
+    @media screen and (max-width: 1000px) {
+      font-size: 1em;
+      padding: 8px 30px;
+    }
+    @media screen and (max-width: 880px) {
+      font-size: 1em;
+      padding: 8px 23px;
+    }
+    @media screen and (max-width: 780px) {
+      font-size: 0.9em;
+      padding: 8px 23px;
+    }
+    @media screen and (max-width: 640px) {
+      font-size: 0.8em;
+      padding: 8px 23px;
+    }
+  }
+}

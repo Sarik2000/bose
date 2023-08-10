@@ -1,0 +1,88 @@
+@import "../helpers/normalize";
+
+
+:root {
+  /* color */
+  --c1: #000000;
+  --c2: #ffffff;
+  --c3: #666666;
+  --c4: #FEB554;
+  --c5: #606651;
+  --c6: #EDAB7B;
+  --c7: #C56A72;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+::selection {
+  color: var(--c3);
+  -webkit-text-fill-color: var(--c3);
+  background-color: var(--c2);
+}
+
+* {
+  text-decoration: none;
+  box-sizing: border-box;
+  scrollbar-width: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  ul{
+    list-style: none;
+  }
+}
+
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--ff);
+}
+
+html {
+  /* font */
+  --ff: "GothamPro", sans-serif;
+  --ff2: "Poppins", sans-serif;
+  --fz: max(1vw, 16px);
+  --fwB: bold;
+  --fwM: 600;
+  --fwR: normal;
+
+  /* offset */
+  --offset: max(calc(1.25 * 1vw), 15px);
+  --offset-l: calc(var(--offset) * 6);
+  --offset-m: calc(var(--offset) * 4.5);
+  --offset-s: calc(var(--offset) * 3);
+  --offset-xs: calc(var(--offset) * 1.5);
+  --offsetMenu: var(--offset);
+
+  @media screen and (max-width: 1299px) {
+    --offset-l: calc(var(--offset) * 4);
+    --offset-m: calc(var(--offset) * 4);
+  }
+
+  @media screen and (max-width: 699px) {
+    --offset-l: calc(var(--offset) * 2.5);
+    --offset-m: calc(var(--offset) * 2.5);
+    --offset-s: calc(var(--offset) * 2);
+  }
+
+  /* width & height */
+  --wMenu: calc(var(--offset) * 4.5);
+  --hHeader: calc(var(--offset) * 4.5);
+}
+
